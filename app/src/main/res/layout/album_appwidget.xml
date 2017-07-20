@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@android:color/transparent">
+
+   <LinearLayout
+        android:id="@+id/album_appwidget"
+        android:layout_width="0dip"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+	    android:background="@android:color/transparent"
+        android:paddingLeft="18dip"
+        android:paddingRight="8dip"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:singleLine="true"
+            android:fadingEdge="horizontal"
+            android:fadingEdgeLength="10dip"
+            android:ellipsize="none"
+            />
+
+        <TextView
+            android:id="@+id/artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:fadingEdge="horizontal"
+            android:fadingEdgeLength="10dip"
+            android:ellipsize="none"
+            />
+    </LinearLayout>
+    
+ 	<ImageView
+        android:layout_width="1dip"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        />
+        
+    <ImageButton
+        android:id="@+id/control_play"
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:src="@mipmap/ic_appwidget_music_play"
+        android:background="@drawable/appwidget_button_center"
+        android:scaleType="center"
+        />
+
+ 	<ImageView
+        android:layout_width="1dip"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        />
+        
+    <ImageButton
+        android:id="@+id/control_next"
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:src="@mipmap/ic_appwidget_music_next"
+        android:background="@drawable/appwidget_button_right"
+        android:scaleType="center"
+        />
+
+</LinearLayout>
