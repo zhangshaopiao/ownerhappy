@@ -19,9 +19,8 @@ import android.widget.ProgressBar;
 
 import com.zhang.zsp.zhangshaopiao.R;
 
+import utils.AppUtil;
 import utils.T;
-
-import static utils.AppUtil.isMobile;
 
 
 public class RelaxFragment extends Fragment {
@@ -37,7 +36,7 @@ public class RelaxFragment extends Fragment {
         mContext = getActivity();
         mWebView = (WebView) view.findViewById(R.id.webView);
         mProgressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
-        T.showShort(getActivity(), isMobile(getActivity()) ? "注意！！！！！移动数据" : "WIFI网络，放心使用");
+        if(AppUtil.isNetworkAvailable(getActivity())) T.showShort(getActivity(), AppUtil.isMobile(getActivity()) ? "注意！！！！！移动数据" : "WIFI网络，放心使用");
         return view;
     }
 
